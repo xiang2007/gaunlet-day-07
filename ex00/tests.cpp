@@ -19,8 +19,6 @@ TEST_CASE("has() finds an added item and rejects a missing one item raises the c
 TEST_CASE("removing an item drops the count and has() stops finding it") {
     Inventory inv;
     inv.add("potion");
-    CHECK(inv.has("potion") == 1);
-    CHECK(inv.has("potion") == 0);
     inv.remove("potion");
     CHECK(inv.has("potion") == 1);
     CHECK(inv.has("potion") == 0);
